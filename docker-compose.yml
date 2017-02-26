@@ -1,0 +1,13 @@
+version: '3'
+services:
+ #desktop
+ desktop:
+  image: marcelmaatkamp/alpine-xfce4-xrdp
+  hostname: desktop
+  volumes:
+   - ssh:/home/alpine/.ssh
+  ports:
+   - "4848:22"
+
+volumes:
+ ssh:
